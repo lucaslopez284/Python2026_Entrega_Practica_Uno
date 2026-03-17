@@ -18,7 +18,6 @@ points = 6
 
 print("¡Bienvenido al Ahorcado!")
 print()
-print(word)
 while attempts > 0:
   # Mostrar progreso: letras adivinadas y guiones para las que faltan
   progress = ""
