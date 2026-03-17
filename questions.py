@@ -1,17 +1,30 @@
 import random
 
-words = [
-"python",
-"programa",
-"variable",
-"funcion",
-"bucle",
-"cadena",
-"entero",
-"lista",
-]
+# Diccionario de categorías
+categories = {
+    "lenguajes": ["python"],
+    "conceptos": ["programa", "variable", "funcion", "bucle"],
+    "tipos de datos": ["cadena", "entero", "lista"]
+}
 
-word = random.choice(words)
+# Mostrar categorías disponibles
+print("Categorías disponibles:")
+for category in categories:
+    print("-", category)
+
+# Validar elección, repitiendo hasta que sea valida
+while True: 
+  # Elegir categoría
+  option = input("Elegí una categoría: ").lower()
+  if option in categories:
+    word = random.choice(categories[option])
+    # Cortar el loop cuando la categoria seleccionada es correcta
+    break 
+  else:
+    print("Categoría inválida")
+    
+
+
 guessed = []
 attempts = 6
 points = 6
