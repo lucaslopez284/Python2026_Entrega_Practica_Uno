@@ -1,5 +1,4 @@
 import random
-from random import sample 
 
 # Diccionario de categorías
 categories = {
@@ -10,7 +9,9 @@ categories = {
 
 # Mostrar categorías disponibles
 print("Categorías disponibles:")
-for category in categories:
+
+# Recorrer diccionario de categorias por clave
+for category in categories.keys():
     print("-", category)
 
 candidates_by_category = {}
